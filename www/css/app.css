@@ -1,0 +1,17 @@
+/* Your app styles here */
+
+table {
+    border-collapse: collapse;
+    margin:5px;
+}
+
+
+
+th{
+    border: 1px solid black;
+    background-color: gainsboro;
+}
+
+td{
+    border: 1px solid black;
+}
