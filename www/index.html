@@ -38,16 +38,10 @@
       </div>
       <div class="page-content">
         <div class="block">
-          <!--<div class="item-title item-label">Штрихкод товара:</div>-->
           <p class="row">
-            <!--<div class="item-input-wrap">-->
-              <input autofocus type="text" name="name" id="barCodeInput" placeholder="Штрихкод товара">
-              <!--<input type="submit" class="button" value="Button">-->
-
-              <!--<span class="input-clear-button"></span>-->
-            <!--</div>-->
+              <input autofocus type="text" name="name" id="barCodeInput" onkeypress="onkeypressFunction(event.keyCode)" placeholder="Штрихкод товара">
             <span>
-            <button class="button col">Button</button>
+            <button class="button col" onclick="enterBarCode()">Enter</button>
               </span>
           </p>
         </div>
@@ -63,10 +57,6 @@
           <tr>
             <td onclick="alert('TD clicked !')" rowspan="2">1</td>
             <td colspan="5">Какой-то там супер </td>
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
-            <!--<td></td>-->
           </tr>
           <tr>
             <!--<td></td>-->
@@ -98,17 +88,18 @@
 
 
 <script>
-//document.getElementById('barCodeInput').addEventListener('onkeyup',function(e){
-//  console.log('120 e=', e);
-//})
 
-document.getElementById('barCodeInput').onsubmit=function(e){
-  if(e.code.toLowerCase().indexOf('enter')>=0){
-    alert("Enter pressed");
-    return;
+function enterBarCode(){
+  var input = document.getElementById("barCodeInput");
+  var value=input.value;
+  console.log('enterBarCode clicked!!! input.value=',value);
+}
+
+function onkeypressFunction(keyCode){
+  if(keyCode==13){
+    alert("onkeypressFunction keyCode  13="+keyCode);
   }
-  alert("Pressed button code="+ JSON.stringify(e));
-};
+}
 
 
 </script>
