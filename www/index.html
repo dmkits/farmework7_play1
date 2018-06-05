@@ -29,49 +29,135 @@
   <!-- Your main view, should have "view-main" class -->
   <div class="view view-main ios-edges">
     <!-- Page, data-name contains page name which can be used in callbacks -->
-    <div class="page" data-name="home">
-      <!-- Top Navbar -->
-      <div class="navbar">
-        <div class="navbar-inner">
-          <div class="title sliding">Инвентаризация</div>
-        </div>
-      </div>
-      <div class="page-content">
-        <div class="block">
-          <p class="row">
-              <input autofocus type="text" name="name" id="barCodeInput" onkeypress="onkeypressFunction(event.keyCode)" placeholder="Штрихкод товара">
-            <span>
-            <button class="button col" onclick="enterBarCode()">Enter</button>
-              </span>
-          </p>
-        </div>
-        <table>
-          <tr>
-            <th onclick="alert('TD clicked !')">Номер</th>
-            <th width="80px;"></th>
-            <th>Штрих код</th>
-            <th>ед.Изм</th>
-            <th>Учетное кол-во</th>
-            <th>Фактическое кол-во</th>
-          </tr>
-          <tr>
-            <td onclick="alert('TD clicked !')" rowspan="2">1</td>
-            <td colspan="5">Какой-то там супер </td>
-          </tr>
-          <tr>
-            <!--<td></td>-->
-            <td></td>
-            <td>111111111</td>
-            <td>шт</td>
-            <td>1</td>
-            <td>1</td>
-          </tr>
-        </table>
 
-        </div>
+
+    <div class="page" data-page="login">
+      <!-- Top Navbar -->
+      <!--<div class="navbar">-->
+        <!--<div class="navbar-inner">-->
+          <!--<div class="title sliding">Инвентаризация</div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <div class="page-content login-screen-content" id="my-login-screen">
+        <div class="login-screen-title">My App</div>
+        <!-- Login form -->
+        <form>
+          <div class="list">
+            <ul>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Username</div>
+                  <div class="item-input-wrap">
+                    <input type="text" name="username" placeholder="Username">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+              <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Password</div>
+                  <div class="item-input-wrap">
+                    <input type="password" name="password" placeholder="Password">
+                    <span class="input-clear-button"></span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="list">
+            <ul>
+              <li>
+                <a href="#" class="login-button">Sign In</a>
+                <!--a href="/main_content/"-->
+              </li>
+            </ul>
+            <div class="block-footer">Some text with login information.</div>
+          </div>
+        </form>
       </div>
     </div>
   </div>
+
+  <div class="page" data-page="main_content_view" >
+    <div class="page-content">
+      <div class="block">
+        <p class="row">
+          <input autofocus type="text" name="name" id="barCodeInput" onkeypress="onkeypressFunction(event.keyCode)" placeholder="Штрихкод товара">
+    <span>
+    <button class="button col" onclick="enterBarCode()">Enter</button>
+    </span>
+        </p>
+      </div>
+      <table>
+        <tr>
+          <th onclick="alert('TD clicked !')">Номер</th>
+          <th width="80px;"></th>
+          <th>Штрих код</th>
+          <th>ед.Изм</th>
+          <th>Учетное кол-во</th>
+          <th>Фактическое кол-во</th>
+        </tr>
+        <tr>
+          <td onclick="alert('TD clicked !')" rowspan="2">1</td>
+          <td colspan="5">Какой-то там супер товар</td>
+        </tr>
+        <tr>
+          <!--<td></td>-->
+          <td></td>
+          <td>111111111</td>
+          <td>шт</td>
+          <td>1</td>
+          <td>1</td>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+
+</div>
+
+
+<!--<div class="view" id="main_content_view" >-->
+  <!--<div class="page-content">-->
+    <!--<div class="block">-->
+      <!--<p class="row">-->
+        <!--<input autofocus type="text" name="name" id="barCodeInput" onkeypress="onkeypressFunction(event.keyCode)" placeholder="Штрихкод товара">-->
+            <!--<span>-->
+            <!--<button class="button col" onclick="enterBarCode()">Enter</button>-->
+              <!--</span>-->
+      <!--</p>-->
+    <!--</div>-->
+    <!--<table>-->
+      <!--<tr>-->
+        <!--<th onclick="alert('TD clicked !')">Номер</th>-->
+        <!--<th width="80px;"></th>-->
+        <!--<th>Штрих код</th>-->
+        <!--<th>ед.Изм</th>-->
+        <!--<th>Учетное кол-во</th>-->
+        <!--<th>Фактическое кол-во</th>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--<td onclick="alert('TD clicked !')" rowspan="2">1</td>-->
+        <!--<td colspan="5">Какой-то там супер </td>-->
+      <!--</tr>-->
+      <!--<tr>-->
+        <!--&lt;!&ndash;<td></td>&ndash;&gt;-->
+        <!--<td></td>-->
+        <!--<td>111111111</td>-->
+        <!--<td>шт</td>-->
+        <!--<td>1</td>-->
+        <!--<td>1</td>-->
+      <!--</tr>-->
+    <!--</table>-->
+
+  <!--</div>-->
+<!--</div>-->
+
+
+
+
+
 <!-- Cordova -->
 <!--
 <script src="cordova.js"></script>
@@ -86,20 +172,30 @@
 <!-- Your custom app scripts -->
 <script src="js/app.js"></script>
 
-
 <script>
+
 
 function enterBarCode(){
   var input = document.getElementById("barCodeInput");
   var value=input.value;
   console.log('enterBarCode clicked!!! input.value=',value);
 }
-
 function onkeypressFunction(keyCode){
   if(keyCode==13){
     alert("onkeypressFunction keyCode  13="+keyCode);
   }
 }
+//function checkLoginData(){
+//  console.log('checkLoginData');
+//  var  userName=document.getElementsByName('username')[0].value.trim();
+//  var  pswd=document.getElementsByName('password')[0].value.trim();
+//  if(userName=="sa" && pswd=="123"){
+//
+//  }else{
+//
+//  }
+////  console.log('userName=', userName,"pswd=",pswd);
+//}
 
 
 </script>

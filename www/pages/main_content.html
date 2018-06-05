@@ -1,0 +1,45 @@
+
+<div class="page" data-name="prod_table">
+    <!-- Top Navbar -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="title sliding">Инвентаризация</div>
+        </div>
+    </div>
+
+    <div class="page" id="main_content-view" >
+        <div class="page-content">
+            <div class="block">
+                <p class="row">
+                    <input autofocus type="text" name="name" id="barCodeInput" onkeypress="onkeypressFunction(event.keyCode)" placeholder="Штрихкод товара">
+<span>
+<button class="button col" onclick="enterBarCode()">Enter</button>
+</span>
+                </p>
+            </div>
+            <table>
+                <tr>
+                    <th onclick="alert('TD clicked !')">Номер</th>
+                    <th width="80px;"></th>
+                    <th>Штрих код</th>
+                    <th>ед.Изм</th>
+                    <th>Учетное кол-во</th>
+                    <th>Фактическое кол-во</th>
+                </tr>
+                <tr>
+                    <td onclick="alert('TD clicked !')" rowspan="2">1</td>
+                    <td colspan="5">Какой-то там супер </td>
+                </tr>
+                <tr>
+                    <!--<td></td>-->
+                    <td></td>
+                    <td>111111111</td>
+                    <td>шт</td>
+                    <td>1</td>
+                    <td>1</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>
